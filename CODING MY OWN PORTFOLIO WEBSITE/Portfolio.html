@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Sophie Lescamela | Illustration & Animation Portfolio</title>
+  <!-- Google Fonts & simple CSS reset -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+background-color: white;
+      font-family: 'Inter', sans-serif;
+      background-color: #7CA676;
+      color: #2D4427;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .portfoliocontainer {
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 0 4rem;
+    }
+
+    /* header / navigation */
+    header {
+      padding: 1.75rem 0;
+      background: #2D4427;
+      backdrop-filter: blur(4px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      color: #70A938;
+    }
+
+    .logo {
+      font-size: 1.7rem;
+      font-weight: 700;
+      background: #CAA520;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      letter-spacing: -0.3px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #CAA520;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #7CA676;
+    }
+
+    /* buttons */
+    .btn {
+      display: inline-block;
+background-color: rgba(254, 254, 254, 0.00);
+      color: #2D4427;
+max-width: 300px;
+font-size: 30px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.25s ease;
+text-align: center;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      color: #CAA520; 
+      transform: translateY(-2px);
+    }
+
+/* BANNER CODE*/
+.banner {
+width: 100%;
+height: 600px;
+background-image: url('Photos/bg.jpg');
+background-size: cover;
+background-position: center;
+   display: flex;              
+    flex-direction: column;        
+    align-items: left;        
+padding-left: 100px;       
+padding-top: 100px;      
+}
+
+
+    /* projects grid */
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin: 2.5rem 0 1rem 0;
+      letter-spacing: -0.02em;
+      border-left: 6px solid #7c3aed;
+      padding-left: 1.2rem;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0 3rem;
+    }
+
+ 
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .tech {
+      background: #f0eef8;
+      padding: 0.2rem 0.7rem;
+      border-radius: 30px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: #3b2e6b;
+    }
+
+    .card-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.25rem;
+    }
+
+    .card-links a {
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: 0.2s;
+    }
+
+    .demo-link {
+      color: #7c3aed;
+    }
+
+    .code-link {
+      color: #4a5568;
+    }
+
+    .demo-link:hover, .code-link:hover {
+      text-decoration: underline;
+      opacity: 0.8;
+    }
+
+    .about-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .about-text {
+      flex: 2;
+    }
+
+    .about-text p {
+      margin-top: 0.75rem;
+      color: #2D4427;
+    }
+
+    .contact-links {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 2rem;
+      color: #7CA676;
+      font-size: 0.9rem;
+      background-color: #2D4427;
+    }
+
+    @media (max-width: 780px) {
+      .hero-content h1 {
+        font-size: 2.3rem;
+      }
+      .container {
+        padding: 0 1.25rem;
+      }
+      .nav-links {
+        gap: 1.2rem;
+      }
+      .avatar-circle {
+        width: 180px;
+        height: 180px;
+      }
+      .avatar-circle img {
+        width: 165px;
+        height: 165px;
+      }
+    }
+  </style>
+
+</head>
+<body>
+
+<!-- THIS IS THE NAVIGATION BAR-->
+<header>
+  <div class="container nav-bar">
+    <div class="logo">Sophie Lescamela</div>
+    <ul class="nav-links">
+     <li><a href="Index.html">Home</a></li>
+	<li><a href="Portfolio.html">Portfolio</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<!--THIS IS THE MAIN CONTENT-->
+<main>
+
+<!-- THIS IS THE BANNER-->
+<div class="banner">
+    <h2 id="work"</h2>
+<p style="font-size: 70px;">Sophie Lescamela</p>
+ <a href="#character design" class="btn" style="padding:0.5rem 1.2rem;">✦Character Design</a>
+<br>
+<a href="#animations" class="btn" style="padding:0.5rem 1.2rem;">✦Animations</a>
+<br>
+<a href="#foodanddrink" class="btn" style="padding:0.5rem 1.2rem;">✦Dicey Diner</a>
+</div>
+
+      <!-- CHARACTER DESIGN PROJECTS-->
+ <div class="portfoliocontainer">
+ <h4 id="character design" class="section-title">Character Design</h4>
+<img src="Photos/CharacterDesign/Greenbug.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+<img src="Photos/CharacterDesign/GREY CATBIRD.jpg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+<img src="Photos/CharacterDesign/Wolfie.jpg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+<img src="Photos/CharacterDesign/clay1.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+<img src="Photos/CharacterDesign/clay2.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+<img src="Photos/CharacterDesign/clay3.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+</div>
+
+      <!-- ANIMATION PROJECTS-->
+<div class="portfoliocontainer">
+ <h5 id="animations" class="section-title">Animations</h5>
+<img src="Photos/Animations/LittleBirdWalk.gif" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+
+
+      <!-- SKETCH PROJECTS-->
+ <h6 id="foodanddrink" class="section-title">Dicey Diner Artwork</h6>
+<div class="portfoliocontainer">
+<img src="Photos/DiceyDiner/OrangeSlices.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+<img src="Photos/DiceyDiner/BLT.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+<img src="Photos/DiceyDiner/Toast.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+<img src="Photos/DiceyDiner/Onion.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+<img src="Photos/DiceyDiner/Honey.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+<img src="Photos/DiceyDiner/FrenchToast.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+<img src="Photos/DiceyDiner/ChiliPepper.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+<img src="Photos/DiceyDiner/CookedFish.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+<img src="Photos/DiceyDiner/Tomato.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+<img src="Photos/DiceyDiner/Potato.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+<img src="Photos/DiceyDiner/RiceBag.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+<img src="Photos/DiceyDiner/BeefTaco.jpeg" style="width:auto; height:400px;">
+</div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 Sophie Lescamela</p>
+    </div>
+</footer>
+ 
+</script>
+</body>
+</html>

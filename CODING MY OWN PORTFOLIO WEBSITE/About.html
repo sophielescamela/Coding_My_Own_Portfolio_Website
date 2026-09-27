@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Sophie Lescamela | Illustration & Animation Portfolio</title>
+  <!-- Google Fonts & simple CSS reset -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #7CA676;
+      color: #2D4427;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* Hero section */
+    .hero {
+      padding: 4rem 0 3rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .hero-content {
+      flex: 1.2;
+    }
+
+    .hero-badge {
+      background: #ede9fe;
+      color: #2D4427;
+      padding: 0.25rem 0.9rem;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-content h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      background: linear-gradient(to right, #1e1a2f, #5b21b6);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      color: #2D4427;
+      max-width: 550px;
+      margin-bottom: 2rem;
+    }
+
+    .hero-avatar {
+      flex: 0.8;
+      display: flex;
+      justify-content: center;
+    }
+
+.avatar-circle {
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    padding: 7px; /* Space for the border image */
+    background: url('border.jpeg') center/cover no-repeat; /* Border image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .avatar-circle img {
+    width: 365px;
+    height: 365px;
+    border-radius: 50%;
+    display: block;
+  }
+
+
+    /* header / navigation */
+    header {
+      padding: 1.75rem 0;
+      background: #2D4427;
+      backdrop-filter: blur(4px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      color: #70A938;
+    }
+
+    .logo {
+      font-size: 1.7rem;
+      font-weight: 700;
+      background: #CAA520;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      letter-spacing: -0.3px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #CAA520;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #7CA676;
+    }
+
+    /* buttons & general */
+    .btn {
+      display: inline-block;
+      background: #CAA520;
+      color: #2D4427;
+      padding: 0.7rem 1.5rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.25s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid #7c3aed;
+      color: #7c3aed;
+    }
+
+    .btn-outline:hover {
+      background: #7c3aed;
+      color: #2D4427;
+    }
+
+    .btn:hover {
+      background: #D1B623;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px -8px #2D4427;
+    }
+
+    /* Hero section */
+    .hero {
+      padding: 4rem 0 3rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .hero-content {
+      flex: 1.2;
+    }
+
+    .hero-badge {
+      background: #ede9fe;
+      color: #6d28d9;
+      padding: 0.25rem 0.9rem;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-content h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      background: #2D4427;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: #2D4427;;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      color: ##2D4427;;
+      max-width: 550px;
+      margin-bottom: 2rem;
+    }
+
+    .hero-avatar {
+      flex: 0.8;
+      display: flex;
+      justify-content: center;
+    }
+
+
+    /* about + contact */
+    .about-section {
+      background: #ffffff;
+      border-radius: 2rem;
+      padding: 2rem;
+      margin: 2.5rem 0;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
+      border: 1px solid #edeaf5;
+    }
+
+    .about-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .about-text {
+      flex: 2;
+    }
+
+    .about-text p {
+      margin-top: 0.75rem;
+      color: #2D4427;
+    }
+
+    .contact-links {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 2rem;
+      color: #7CA676;
+      font-size: 0.9rem;
+      background-color: #2D4427;
+    }
+
+    @media (max-width: 780px) {
+      .hero-content h1 {
+        font-size: 2.3rem;
+      }
+      .container {
+        padding: 0 1.25rem;
+      }
+      .nav-links {
+        gap: 1.2rem;
+      }
+
+  .avatar-circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    padding: 7px; /* Space for the border image */
+    background: url('border-pattern.png') center/cover no-repeat; /* Border image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .avatar-circle img {
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+    display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav-bar">
+    <div class="logo">Sophie Lescamela</div>
+    <ul class="nav-links">
+     <li><a href="Index.html">Home</a></li>
+	<li><a href="Portfolio.html">Portfolio</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<!-- About section -->
+ <div class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <div id="about" class="hero-content">
+        <h1>Hello! I'm Sophie :)</h1>
+        <p>I'm an illustrator and animator based in the US. I am currently a senior at the University of Wisconsin Whitewater majoring in Media Arts and Game Development. Something about me is that I make all of my work by hand! I love doing everything the traditional way, as I feel it is a more intimate experience between me and my art. It is my hope that others who are looking at my work can see how much love was poured into the making of it.</p>
+<p>Some of my professional work includes the art assets of Dicey Diner, a roguelite deckbuilding videogame that is currently in the works to eventually be released on the PC. I do a bit of every medium because I believe that confiniting yourself to one is very limiting and I have a genuine love for everything that the art world has to offer.</p>
+<a href="Resume 2026.pdf" class="btn" style="padding:0.5rem 1.2rem;">CV</a>
+      </div>
+      <div class="hero-avatar">
+        <div class="avatar-circle">
+          <img src="Photos/portrait.jpg" alt="Portrait photo">
+        </div>
+      </div>
+    </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 Sophie Lescamela</p>
+    </div>
+</footer>
+ 
+</script>
+</body>
+</html>
