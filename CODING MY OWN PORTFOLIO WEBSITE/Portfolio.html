@@ -14,7 +14,6 @@
     }
 
     body {
-background-color: white;
       font-family: 'Inter', sans-serif;
       background-color: #7CA676;
       color: #2D4427;
@@ -142,7 +141,6 @@ padding-top: 100px;
     }
 
     .tech {
-      background: #f0eef8;
       padding: 0.2rem 0.7rem;
       border-radius: 30px;
       font-size: 0.75rem;
@@ -150,21 +148,74 @@ padding-top: 100px;
       color: #3b2e6b;
     }
 
-    .card-links {
-      display: flex;
-      gap: 1rem;
-      margin-top: 0.25rem;
-    }
+      .card {
+        width: 320px;
+        height: 500px;
+        border-radius: 20px;
+        overflow: hidden;
+        border: 8px solid #2D4427;
+        position: relative;
+        margin: 20px;
+      }
 
-    .card-links a {
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: 0.2s;
-    }
+      .card-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+      }
+
+      .card-body {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: -100%;
+        color: #CAA520;
+        position: absolute;
+        background: #1f3d4738;
+        backdrop-filter: blue(5px);
+        border-radius: 15px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        transition: 1.5s;
+      }
+
+      .card:hover .card-body {
+        right: 0;
+      }
+
+      .card-title {
+        text-transform: uppercase;
+        font-size: 45px;
+        font-weight: 500;
+      }
+
+      .card-sub-title {
+        text-transform: capitalize;
+        font-size: 14px;
+        font-weight: 300;
+      }
+
+      .card-info {
+        font-size: 16px;
+        line-height: 25px;
+        margin: 40px 0;
+        font-weight: 400;
+      }
+
+      .card-btn {
+        color: #CAA520;
+        background: #2D4427;
+        width: 120px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-transform: capitalize;
+        border: none;
+        outline: none;
+        font-weight: 500;
+        cursor: pointer;
+      }
 
     .demo-link {
       color: #7c3aed;
@@ -200,6 +251,11 @@ padding-top: 100px;
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
+    }
+
+    .flexcontainer {
+      display: flex;
+      background-color: #7CA676;;
     }
 
     footer {
@@ -250,88 +306,96 @@ padding-top: 100px;
 
 <!--THIS IS THE MAIN CONTENT-->
 <main>
+ 
+<!--ORGANIZES CARDS-->
+  <div class="flexcontainer">
 
-<!-- THIS IS THE BANNER-->
- <!-- Image button for Dicey diner portfolio section-->
-  <a href="DiceyDinerPortfolio.html" target="_blank" style="text-decoration:none;">
-    <button style="
-      width:400px;
-      height:400px;
-      background-image:url('Photos/DiceyDiner/CookedFish.jpeg');
-background-color:transparent;
-      background-size:cover;
-      background-repeat:no-repeat;
-      background-position:center;
-      border:none;
-      cursor:pointer;
-    "></button>
-</div>
+ <div class="card">
+      <img
+        src="ddcover.png"
+        class="card-img"
+      />
+      <div class="card-body">
+        <h1 class="card-title">Dicey Diner</h1>
+        <p class="card-sub-title">
+          Roguelike Deckbuilding Game on the PC
+        </p>
+        <p class="card-info">
+          All of the art in the game is done by me!
+        </p>
+        <a href="DiceyDinerPortfolio.html" class="card-btn">More</a>
+      </div>
+    </div>
 
-<!-- Image button for Unga Bunga Cookunga Portfolio Section-->
-  <a href="UBC.html" target="_blank" style="text-decoration:none;">
-    <button style="
-      width:400px;
-      height:400px;
-      background-image:url('Photos/DiceyDiner/Omelette.jpeg');
-background-color:transparent;
-      background-size:cover;
-      background-repeat:no-repeat;
-      background-position:center;
-      border:none;
-      cursor:pointer;
-    "></button>
-</div>
+     <div class="card">
+      <img
+        src="ubccover.png"
+      />
+      <div class="card-body">
+        <h1 class="card-title">Unga Bunga Cookunga</h1>
+        <p class="card-sub-title">
+          Resource Management PC Game
+        <p class="card-info">
+          I am the art director and the lead artist for this soon-to-be-released game.
+        </p>
+        <a href="UBC.html" class="card-btn">More</a>
+      </div>
+    </div>
 
-<!-- Image button for VN w Lalaina Cookunga Portfolio Section-->
-  <a href="Miscellaneous.html" target="_blank" style="text-decoration:none;">
-    <button style="
-      width:400px;
-      height:400px;
-      background-image:url('Photos/DiceyDiner/Onion.jpeg');
-background-color:transparent;
-      background-size:cover;
-      background-repeat:no-repeat;
-      background-position:center;
-      border:none;
-      cursor:pointer;
-    "></button>
-</div>
+     <div class="card">
+      <img
+        src="Photos/UndergradResearch/clay1.jpeg"
+        class="card-img"
+      />
+      <div class="card-body">
+        <h1 class="card-title">Undergraduate Research</h1>
+        <p class="card-sub-title">
+          Stopmotion Animation Study
+        </p>
+        <p class="card-info">
+          Stopmotion classics like Wallace and Gromit were studied thoughly, leading up to the creation of my own oil-based clay recipe and stopmotion utilizing it.
+        </p>
+        <a href="UndergradResearch.html" class="card-btn">More</a>
+      </div>
+    </div>
+    </div>
 
-      <!-- CHARACTER DESIGN PROJECTS-->
- <div class="portfoliocontainer">
- <h4 id="character design" class="section-title">Character Design</h4>
-<img src="Photos/CharacterDesign/Greenbug.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
-<img src="Photos/CharacterDesign/GREY CATBIRD.jpg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
-<img src="Photos/CharacterDesign/Wolfie.jpg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
-<img src="Photos/CharacterDesign/clay1.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
-<img src="Photos/CharacterDesign/clay2.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
-<img src="Photos/CharacterDesign/clay3.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
-</div>
+    <div class="flexcontainer">
 
-      <!-- ANIMATION PROJECTS-->
-<div class="portfoliocontainer">
- <h5 id="animations" class="section-title">Animations</h5>
-<img src="Photos/Animations/LittleBirdWalk.gif" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+         <div class="card">
+      <img
+        src="Photos/Conceptual/Hearts.png"
+      />
+      <div class="card-body">
+        <h1 class="card-title">Apothecary Arena</h1>
+        <p class="card-sub-title">
+          Cut-throat board game
+        <p class="card-info">
+          These were made for a board game concept project for one of my classes. 
+        </p>
+        <a href="Concept.html" class="card-btn">More</a>
+      </div>
+    </div>
 
+         <div class="card">
+      <img
+        src="Photos/VN/Ty.jpg"
+      />
+      <div class="card-body">
+        <h1 class="card-title">Untitled Visual Novel</h1>
+        <p class="card-sub-title">
+          Sole Artist and Coder
+        <p class="card-info">
+          This game combines 2d with  3d, everything being crafted by hand.
+        </p>
+        <a href="VN.html" class="card-btn">More</a>
+      </div>
+    </div>
 
-      <!-- SKETCH PROJECTS-->
- <h6 id="foodanddrink" class="section-title">Dicey Diner Artwork</h6>
-<div class="portfoliocontainer">
-<img src="Photos/DiceyDiner/OrangeSlices.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
-<img src="Photos/DiceyDiner/BLT.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
-<img src="Photos/DiceyDiner/Toast.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
-<img src="Photos/DiceyDiner/Onion.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
-<img src="Photos/DiceyDiner/Honey.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
-<img src="Photos/DiceyDiner/FrenchToast.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
-<img src="Photos/DiceyDiner/ChiliPepper.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
-<img src="Photos/DiceyDiner/CookedFish.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
-<img src="Photos/DiceyDiner/Tomato.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
-<img src="Photos/DiceyDiner/Potato.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
-<img src="Photos/DiceyDiner/RiceBag.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
-<img src="Photos/DiceyDiner/BeefTaco.jpeg" style="width:auto; height:400px;">
-</div>
+    </div>
+    
+
 </main>
-
 <footer>
   <div class="container">
     <p>© 2026 Sophie Lescamela</p>
