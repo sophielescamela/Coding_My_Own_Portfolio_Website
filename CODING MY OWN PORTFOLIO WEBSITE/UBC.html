@@ -14,12 +14,13 @@
     }
 
     body {
-background-color: white;
+      background-color: white;
       font-family: 'Inter', sans-serif;
       background-color: #7CA676;
       color: #2D4427;
       line-height: 1.5;
       scroll-behavior: smooth;
+      font-size: 1.2rem; 
     }
 
     .container {
@@ -32,6 +33,12 @@ background-color: white;
       max-width: 1500px;
       margin: 0 auto;
       padding: 0 4rem;
+    }
+
+        .hero-avatar {
+      flex: 0.8;
+      display: flex;
+      justify-content: center;
     }
 
     /* header / navigation */
@@ -202,6 +209,145 @@ padding-top: 100px;
       gap: 1rem;
     }
 
+          .card {
+        width: 320px;
+        height: 500px;
+        border-radius: 20px;
+        overflow: hidden;
+        border: 8px solid #2D4427;
+        position: relative;
+        margin: 20px;
+      }
+
+      .card-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+      }
+
+      .card-body {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: -100%;
+        color: #CAA520;
+        position: absolute;
+        background: #1f3d4738;
+        backdrop-filter: blue(5px);
+        border-radius: 15px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        transition: 1.5s;
+      }
+
+      .card:hover .card-body {
+        right: 0;
+      }
+
+      .card-title {
+        text-transform: uppercase;
+        font-size: 45px;
+        font-weight: 500;
+      }
+
+      .card-sub-title {
+        text-transform: capitalize;
+        font-size: 14px;
+        font-weight: 300;
+      }
+
+      .card-info {
+        font-size: 16px;
+        line-height: 25px;
+        margin: 40px 0;
+        font-weight: 400;
+      }
+
+      .card-btn {
+        color: #CAA520;
+        background: #2D4427;
+        width: 120px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-transform: capitalize;
+        border: none;
+        outline: none;
+        font-weight: 500;
+        cursor: pointer;
+      }
+
+          .about-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+
+       .flexcontainer {
+      display: flex;
+      background-color: #7CA676;
+      align-items: center;
+      justify-content: center;
+    }
+
+      .avatar-circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    padding: 7px; /* Space for the border image */
+    background: url('border-pattern.png') center/cover no-repeat; /* Border image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .avatar-circle img {
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+    display: block;
+      }
+
+      /* GALLERY CODE */
+.gallery {
+  padding-top: 1em;
+  /* BASE # OF COLUMNS; CAN CHANGE THIS */
+  columns: auto 3;
+  text-align: center;
+}
+
+.gallery img {
+  border: 1px solid black;
+  width: 100%;
+}
+
+figure {
+  display: inline-block;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.spotlightImage {
+  display: block;
+  margin: 0 auto;
+}
+
+/* CHANGES # OF COLUMNS FOR SMALL SCREENS*/
+@media only screen and (max-width: 800px) {
+  .gallery {
+    columns: auto 2;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .gallery {
+    columns: auto 1;
+  }
+}
+
     footer {
       text-align: center;
       padding: 2rem 0;
@@ -225,6 +371,7 @@ padding-top: 100px;
         width: 180px;
         height: 180px;
       }
+      
       .avatar-circle img {
         width: 165px;
         height: 165px;
@@ -251,13 +398,157 @@ padding-top: 100px;
 <!--THIS IS THE MAIN CONTENT-->
 <main>
 
-        <!-- UNGA BUNGA COOKUNGA PROJECTS-->
-<div class="portfoliocontainer">
- <h5 id="animations" class="section-title">Unga Bunga Cookunga</h5>
-<img src="Photos/UBC/SteamIcon.jpg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
-<img src="Photos/UBC/Credits.jpg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
-<img src="Photos/UBC/Fire.GIF" alt="PROJECT IMAGE" style="width:auto; height:400px;">
-</div>
+  </div><br>
+  </div><br>
+  
+  <title>Undergraduate Research</title>
+
+  <!--PARAGRAPHS AND SMALL PHOTOS (THE ABOUT THE PROJECT SECTION)-->
+      <!-- About section -->
+ <div class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <div id="about" class="hero-content">
+      <div id="about" class="about-section">
+      <div class="about-flex">
+        <div class="about-text">
+          <h2 style="font-size: 1.8rem;">Unga Bunga Cookunga</h2>
+          <p>Unga Bunga Cookunga is a cooking resource management game that I am working on with a small group of people for my capstone class. You play as Unga Bunga, the chef unga for all of the other ungas in your tribe. You have took feed all of your ungas and keep them happy and healthy throughout each of the four seasons, each one with it's own unique traits. The difficulty really spikes up during winter. There are many different recipes that you can make, some being better for certain ungas if the dish includes their favorite food! There are three skill-based minigames you can play in the preparation of your dishes for your ungas: bashing, mixing, and cooking!</p>
+          <div style="flex: 1; text-align: center;">
+          </div><br>
+
+          <div class="hero-avatar">
+          <img src="Photos/UBC/SteamIcon.jpg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+        </div>
+        <br>
+        <br>
+
+        <p>I was the person who proposed the idea of this game to the class, showing them a mood board of what the caveman-inspired artstyle of the game would look like. Of course, not all of the assets would look the same as mine, as there are several different artists on the team, but the whole group loved the idea. They voted that I become the lead artist and art director of the game, which I happily accepted the roles of. This was my first major lead role in any project, so I was happy to take on the challenge.</p>
+        <br>
+        <br>
+          </div><br>
+        </div>
+
+                  <div class="hero-avatar">
+          <img src="Photos/UBC/Credits.jpg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+        </div>
+        <br>
+        <br>
+
+        </div>
+        <p>I did not consistently work on one subject matter for my entirety of the time making this game; I ended up contributing to almost everything in some way. I did all of the artwork for the game that is shown on the Steam Page, the entirety of the credits animation, all of the in-game backgrounds, a few foods and UI items, and some other miscellaneous art assets! I honestly had a lot of fun with the constantly-changing subject matter that I would be making artwork for. I am used to working on a specific type of asset for a game and nothing outside of that range; the chage of pace was really refreshing.</p>
+        
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  </div><br>
+  </div><br>
+
+  </section>
+
+    <!--ACTUAL PORTFOLIO PORTION OF THE PAGE-->
+    <title>Pictures of my work</title>
+    <div class="gallery">
+    <img src="Photos/UBC/coconut.PNG" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+    <img src="Photos/UBC/badui.PNG" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+    <img src="Photos/UBC/calendar.PNG" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+    </div>
+
+  </div><br>
+  </div><br>
+  </div><br>
+  </div><br>
+
+<!--ORGANIZES CARDS AND PLACES THEM BELOW THE ACTUAL PROJECT PAGE-->
+  <div class="flexcontainer">
+
+ <div class="card">
+      <img
+        src="ddcover.png"
+        class="card-img"
+      />
+      <div class="card-body">
+        <h1 class="card-title">Dicey Diner</h1>
+        <p class="card-sub-title">
+          Roguelike Deckbuilding Game on the PC
+        </p>
+        <p class="card-info">
+          All of the art in the game is done by me!
+        </p>
+        <a href="DiceyDinerPortfolio.html" class="card-btn">More</a>
+      </div>
+    </div>
+
+     <div class="card">
+      <img
+        src="ubccover.png"
+      />
+      <div class="card-body">
+        <h1 class="card-title">Unga Bunga Cookunga</h1>
+        <p class="card-sub-title">
+          Resource Management PC Game
+        <p class="card-info">
+          I am the art director and the lead artist for this soon-to-be-released game.
+        </p>
+        <a href="UBC.html" class="card-btn">More</a>
+      </div>
+    </div>
+
+     <div class="card">
+      <img
+        src="Photos/UndergradResearch/clay1.jpeg"
+        class="card-img"
+      />
+      <div class="card-body">
+        <h1 class="card-title">Undergraduate Research</h1>
+        <p class="card-sub-title">
+          Stopmotion Animation Study
+        </p>
+        <p class="card-info">
+          Stopmotion classics like Wallace and Gromit were studied thoughly, leading up to the creation of my own oil-based clay recipe and stopmotion utilizing it.
+        </p>
+        <a href="UndergradResearch.html" class="card-btn">More</a>
+      </div>
+    </div>
+    </div>
+
+    <div class="flexcontainer">
+
+         <div class="card">
+      <img
+        src="Photos/conceptcover.jpg"
+      />
+      <div class="card-body">
+        <h1 class="card-title">Apothecary Arena</h1>
+        <p class="card-sub-title">
+          Cut-throat board game
+        <p class="card-info">
+          These were made for a board game concept project for one of my classes. 
+        </p>
+        <a href="Concept.html" class="card-btn">More</a>
+      </div>
+    </div>
+
+         <div class="card">
+      <img
+        src="Photos/vncover.jpg"
+      />
+      <div class="card-body">
+        <h1 class="card-title">Untitled Visual Novel</h1>
+        <p class="card-sub-title">
+          Sole Artist and Coder
+        <p class="card-info">
+          This game combines 2d with  3d, everything being crafted by hand.
+        </p>
+        <a href="VN.html" class="card-btn">More</a>
+      </div>
+    </div>
+
+    </div>
+
 
 </main>
 <footer>

@@ -14,12 +14,13 @@
     }
 
     body {
-background-color: white;
+      background-color: white;
       font-family: 'Inter', sans-serif;
       background-color: #7CA676;
       color: #2D4427;
       line-height: 1.5;
       scroll-behavior: smooth;
+      font-size: 1.2rem; 
     }
 
     .container {
@@ -32,6 +33,12 @@ background-color: white;
       max-width: 1500px;
       margin: 0 auto;
       padding: 0 4rem;
+    }
+
+        .hero-avatar {
+      flex: 0.8;
+      display: flex;
+      justify-content: center;
     }
 
     /* header / navigation */
@@ -202,6 +209,145 @@ padding-top: 100px;
       gap: 1rem;
     }
 
+          .card {
+        width: 320px;
+        height: 500px;
+        border-radius: 20px;
+        overflow: hidden;
+        border: 8px solid #2D4427;
+        position: relative;
+        margin: 20px;
+      }
+
+      .card-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+      }
+
+      .card-body {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: -100%;
+        color: #CAA520;
+        position: absolute;
+        background: #1f3d4738;
+        backdrop-filter: blue(5px);
+        border-radius: 15px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        transition: 1.5s;
+      }
+
+      .card:hover .card-body {
+        right: 0;
+      }
+
+      .card-title {
+        text-transform: uppercase;
+        font-size: 45px;
+        font-weight: 500;
+      }
+
+      .card-sub-title {
+        text-transform: capitalize;
+        font-size: 14px;
+        font-weight: 300;
+      }
+
+      .card-info {
+        font-size: 16px;
+        line-height: 25px;
+        margin: 40px 0;
+        font-weight: 400;
+      }
+
+      .card-btn {
+        color: #CAA520;
+        background: #2D4427;
+        width: 120px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-transform: capitalize;
+        border: none;
+        outline: none;
+        font-weight: 500;
+        cursor: pointer;
+      }
+
+          .about-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+
+       .flexcontainer {
+      display: flex;
+      background-color: #7CA676;
+      align-items: center;
+      justify-content: center;
+    }
+
+      .avatar-circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    padding: 7px; /* Space for the border image */
+    background: url('border-pattern.png') center/cover no-repeat; /* Border image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .avatar-circle img {
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+    display: block;
+      }
+
+      /* GALLERY CODE */
+.gallery {
+  padding-top: 1em;
+  /* BASE # OF COLUMNS; CAN CHANGE THIS */
+  columns: auto 3;
+  text-align: center;
+}
+
+.gallery img {
+  border: 1px solid black;
+  width: 100%;
+}
+
+figure {
+  display: inline-block;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.spotlightImage {
+  display: block;
+  margin: 0 auto;
+}
+
+/* CHANGES # OF COLUMNS FOR SMALL SCREENS*/
+@media only screen and (max-width: 800px) {
+  .gallery {
+    columns: auto 2;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .gallery {
+    columns: auto 1;
+  }
+}
+
     footer {
       text-align: center;
       padding: 2rem 0;
@@ -225,6 +371,7 @@ padding-top: 100px;
         width: 180px;
         height: 180px;
       }
+      
       .avatar-circle img {
         width: 165px;
         height: 165px;
@@ -251,15 +398,155 @@ padding-top: 100px;
 <!--THIS IS THE MAIN CONTENT-->
 <main>
 
-  <title>Undergraduate Research</title>
+  </div><br>
+  </div><br>
+  
+  <title>Untitled Visual Novel</title>
 
-      <!-- UNDERGRAD RESEARCH PROJECTS-->
- <div class="portfoliocontainer">
- <h4 id="Character Design" class="section-title">Undergraduate Research</h4>
-<img src="Photos/UndergradResearch/clay1.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
-<img src="Photos/UndergradResearch/clay2.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
-<img src="Photos/UndergradResearch/clay3.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
-</div>
+  <!--PARAGRAPHS AND SMALL PHOTOS (THE ABOUT THE PROJECT SECTION)-->
+      <!-- About section -->
+ <div class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <div id="about" class="hero-content">
+      <div id="about" class="about-section">
+      <div class="about-flex">
+        <div class="about-text">
+          <h2 style="font-size: 1.8rem;">Untitled Visual Novel</h2>
+          <div style="flex: 1; text-align: center;">
+          </div><br>
+
+        <p>I am working on Untitled Visual Novel with Lalaina Chandanais, a seasoned video game writer. This project is different than the others in my portfolio in the way that I am doing both the coding for the game and the artwork. Untitled Visual Novel combines 2d and 3d elements to match the unsettling and unatural theme of the game. Untitled Visual Novel is a psychological horror game about religious trauma.</p>
+        <br>
+          </div><br>
+        </div>
+        </div>
+        <p>The artstyle of this project takes heavy inspiration from stopmotion films such as the Corpse Bride and Coraline, as they have a way of bending reality in a way that is unnerving in a way where you just can't help but come back for more. All of the 3d art assets of the game were made by hand and scanned into the game. Below are some images of the puppet fabrication process. We wanted the proportions of the puppets to be slightly altered so they were more offputting.</p>  
+
+          </div><br>
+            </div><br>
+
+        </div>
+                          <div class="hero-avatar">
+              <img src="Photos/VN/wip1.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+              <img src="Photos/VN/wip2.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+              <img src="Photos/VN/wip3.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+              <img src="Photos/VN/wip4.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+        </div>
+
+          </div><br>
+            </div><br>
+
+        <p>Though this game is early in the development stage, it has a lot of support by different groups of people. The setting for this game is inspired by older Victorian styles of living.</p>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  </div><br>
+  </div><br>
+
+  </section>
+
+    <!--ACTUAL PORTFOLIO PORTION OF THE PAGE-->
+    <title>Pictures of my work</title>
+    <div class="gallery">
+    <img src="Photos/VN/robe.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+    <img src="Photos/VN/Ty.jpg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+    </div>
+
+  </div><br>
+  </div><br>
+  </div><br>
+  </div><br>
+
+<!--ORGANIZES CARDS AND PLACES THEM BELOW THE ACTUAL PROJECT PAGE-->
+  <div class="flexcontainer">
+
+ <div class="card">
+      <img
+        src="ddcover.png"
+        class="card-img"
+      />
+      <div class="card-body">
+        <h1 class="card-title">Dicey Diner</h1>
+        <p class="card-sub-title">
+          Roguelike Deckbuilding Game on the PC
+        </p>
+        <p class="card-info">
+          All of the art in the game is done by me!
+        </p>
+        <a href="DiceyDinerPortfolio.html" class="card-btn">More</a>
+      </div>
+    </div>
+
+     <div class="card">
+      <img
+        src="ubccover.png"
+      />
+      <div class="card-body">
+        <h1 class="card-title">Unga Bunga Cookunga</h1>
+        <p class="card-sub-title">
+          Resource Management PC Game
+        <p class="card-info">
+          I am the art director and the lead artist for this soon-to-be-released game.
+        </p>
+        <a href="UBC.html" class="card-btn">More</a>
+      </div>
+    </div>
+
+     <div class="card">
+      <img
+        src="Photos/UndergradResearch/clay1.jpeg"
+        class="card-img"
+      />
+      <div class="card-body">
+        <h1 class="card-title">Undergraduate Research</h1>
+        <p class="card-sub-title">
+          Stopmotion Animation Study
+        </p>
+        <p class="card-info">
+          Stopmotion classics like Wallace and Gromit were studied thoughly, leading up to the creation of my own oil-based clay recipe and stopmotion utilizing it.
+        </p>
+        <a href="UndergradResearch.html" class="card-btn">More</a>
+      </div>
+    </div>
+    </div>
+
+    <div class="flexcontainer">
+
+         <div class="card">
+      <img
+        src="Photos/conceptcover.jpg"
+      />
+      <div class="card-body">
+        <h1 class="card-title">Apothecary Arena</h1>
+        <p class="card-sub-title">
+          Cut-throat board game
+        <p class="card-info">
+          These were made for a board game concept project for one of my classes. 
+        </p>
+        <a href="Concept.html" class="card-btn">More</a>
+      </div>
+    </div>
+
+         <div class="card">
+      <img
+        src="Photos/vncover.jpg"
+      />
+      <div class="card-body">
+        <h1 class="card-title">Untitled Visual Novel</h1>
+        <p class="card-sub-title">
+          Sole Artist and Coder
+        <p class="card-info">
+          This game combines 2d with  3d, everything being crafted by hand.
+        </p>
+        <a href="VN.html" class="card-btn">More</a>
+      </div>
+    </div>
+
+    </div>
+
 
 </main>
 <footer>

@@ -14,12 +14,13 @@
     }
 
     body {
-background-color: white;
+      background-color: white;
       font-family: 'Inter', sans-serif;
       background-color: #7CA676;
       color: #2D4427;
       line-height: 1.5;
       scroll-behavior: smooth;
+      font-size: 1.2rem; 
     }
 
     .container {
@@ -32,6 +33,12 @@ background-color: white;
       max-width: 1500px;
       margin: 0 auto;
       padding: 0 4rem;
+    }
+
+        .hero-avatar {
+      flex: 0.8;
+      display: flex;
+      justify-content: center;
     }
 
     /* header / navigation */
@@ -202,6 +209,145 @@ padding-top: 100px;
       gap: 1rem;
     }
 
+          .card {
+        width: 320px;
+        height: 500px;
+        border-radius: 20px;
+        overflow: hidden;
+        border: 8px solid #2D4427;
+        position: relative;
+        margin: 20px;
+      }
+
+      .card-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+      }
+
+      .card-body {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: -100%;
+        color: #CAA520;
+        position: absolute;
+        background: #1f3d4738;
+        backdrop-filter: blue(5px);
+        border-radius: 15px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        transition: 1.5s;
+      }
+
+      .card:hover .card-body {
+        right: 0;
+      }
+
+      .card-title {
+        text-transform: uppercase;
+        font-size: 45px;
+        font-weight: 500;
+      }
+
+      .card-sub-title {
+        text-transform: capitalize;
+        font-size: 14px;
+        font-weight: 300;
+      }
+
+      .card-info {
+        font-size: 16px;
+        line-height: 25px;
+        margin: 40px 0;
+        font-weight: 400;
+      }
+
+      .card-btn {
+        color: #CAA520;
+        background: #2D4427;
+        width: 120px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-transform: capitalize;
+        border: none;
+        outline: none;
+        font-weight: 500;
+        cursor: pointer;
+      }
+
+          .about-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+
+       .flexcontainer {
+      display: flex;
+      background-color: #7CA676;
+      align-items: center;
+      justify-content: center;
+    }
+
+      .avatar-circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    padding: 7px; /* Space for the border image */
+    background: url('border-pattern.png') center/cover no-repeat; /* Border image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .avatar-circle img {
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+    display: block;
+      }
+
+      /* GALLERY CODE */
+.gallery {
+  padding-top: 1em;
+  /* BASE # OF COLUMNS; CAN CHANGE THIS */
+  columns: auto 3;
+  text-align: center;
+}
+
+.gallery img {
+  border: 1px solid black;
+  width: 100%;
+}
+
+figure {
+  display: inline-block;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.spotlightImage {
+  display: block;
+  margin: 0 auto;
+}
+
+/* CHANGES # OF COLUMNS FOR SMALL SCREENS*/
+@media only screen and (max-width: 800px) {
+  .gallery {
+    columns: auto 2;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .gallery {
+    columns: auto 1;
+  }
+}
+
     footer {
       text-align: center;
       padding: 2rem 0;
@@ -225,6 +371,7 @@ padding-top: 100px;
         width: 180px;
         height: 180px;
       }
+      
       .avatar-circle img {
         width: 165px;
         height: 165px;
@@ -251,24 +398,165 @@ padding-top: 100px;
 <!--THIS IS THE MAIN CONTENT-->
 <main>
 
-      <!-- DICEY DINER PROJECTS-->
- <h6 id="foodanddrink" class="section-title">Dicey Diner Artwork</h6>
-<div class="portfoliocontainer">
-<img src="Photos/DiceyDiner/OrangeSlices.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
-<img src="Photos/DiceyDiner/BLT.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
-<img src="Photos/DiceyDiner/Toast.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
-<img src="Photos/DiceyDiner/Onion.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
-<img src="Photos/DiceyDiner/Honey.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
-<img src="Photos/DiceyDiner/FrenchToast.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
-<img src="Photos/DiceyDiner/ChiliPepper.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
-<img src="Photos/DiceyDiner/CookedFish.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
-<img src="Photos/DiceyDiner/Tomato.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
-<img src="Photos/DiceyDiner/Potato.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
-<img src="Photos/DiceyDiner/RiceBag.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
-<img src="Photos/DiceyDiner/BeefTaco.jpeg" style="width:auto; height:400px;">
-</div>
-</main>
+  </div><br>
+  </div><br>
+  
+  <title>Dicey Diner</title>
 
+  <!--PARAGRAPHS AND SMALL PHOTOS (THE ABOUT THE PROJECT SECTION)-->
+      <!-- About section -->
+ <div class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <div id="about" class="hero-content">
+      <div id="about" class="about-section">
+      <div class="about-flex">
+        <div class="about-text">
+          <h2 style="font-size: 1.8rem;">Dicey Diner</h2>
+          <p>Dicey Diner is a PC game that I am working on with Ty Bakken. I am making all of the art assets for the game and he is coding the entirety of it. It is a roguelike deckbuilding game where you have to cook meals for your customers at a 70s themed diner. However, these meals are created by the rolling of dice, each face having a certain ingredient on it. There are three in-game phases to each day: breakfast, lunch, and dinner. In between each of the three phases, the player has the option to go to the shop and buy new dice faces and customize their dice for the upcoming meal phase. Breakfast, lunch, and dinner each have their own individual challenges and the player needs to react accordingly. We are currently making a steam page for it and are fine tuning some things so that we will be able to release a demo shortly.</p>
+          <div style="flex: 1; text-align: center;">
+          </div><br>
+
+                  </div>
+                  <div class="hero-avatar">
+          <video src="Photos/DiceyDiner/presentvid.MOV" alt="PROJECT VIDEO" style="width:auto; height:400px;">
+        </div>
+          
+          </div><br>
+        </div>
+        </div>
+        <p>Ty and I presented our game at the MAGD Expo held by UWW in spring of 2026 and our game ended up placing second out of everyone there. Above is a short clip of a sever year old trying out the game; he ended up really enjoying it and asked when it was going to come out.</p>  
+
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  </div><br>
+  </div><br>
+
+  </section>
+
+    <!--ACTUAL PORTFOLIO PORTION OF THE PAGE-->
+    <title>Pictures of my work</title>
+    <div class="gallery">
+    <img src="Photos/DiceyDiner/fishandbeans.PNG" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+    <img src="Photos/DiceyDiner/tomato.PNG" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+    <img src="Photos/DiceyDiner/cookedfish.PNG" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+    <img src="Photos/DiceyDiner/peeler.PNG" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+    <img src="Photos/DiceyDiner/rawfish.PNG" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+    <img src="Photos/DiceyDiner/tomatosoup.PNG" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+    <img src="Photos/DiceyDiner/orangeslices.PNG" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+    <img src="Photos/DiceyDiner/apple.PNG" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+    <img src="Photos/DiceyDiner/chilipepper.PNG" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+    <img src="Photos/DiceyDiner/blt.PNG" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+    <img src="Photos/DiceyDiner/frenchtoast.PNG" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+    <img src="Photos/DiceyDiner/hyena.PNG" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+    <img src="Photos/DiceyDiner/beansontoast.PNG" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+    <img src="Photos/DiceyDiner/garlic.PNG" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+    <img src="Photos/DiceyDiner/honey.PNG" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+    <img src="Photos/DiceyDiner/potato.PNG" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+    <img src="Photos/DiceyDiner/orange.PNG" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+    <img src="Photos/DiceyDiner/cheese.PNG" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+
+
+    </div>
+
+  </div><br>
+  </div><br>
+  </div><br>
+  </div><br>
+
+<!--ORGANIZES CARDS AND PLACES THEM BELOW THE ACTUAL PROJECT PAGE-->
+  <div class="flexcontainer">
+
+ <div class="card">
+      <img
+        src="ddcover.png"
+        class="card-img"
+      />
+      <div class="card-body">
+        <h1 class="card-title">Dicey Diner</h1>
+        <p class="card-sub-title">
+          Roguelike Deckbuilding Game on the PC
+        </p>
+        <p class="card-info">
+          All of the art in the game is done by me!
+        </p>
+        <a href="DiceyDinerPortfolio.html" class="card-btn">More</a>
+      </div>
+    </div>
+
+     <div class="card">
+      <img
+        src="ubccover.png"
+      />
+      <div class="card-body">
+        <h1 class="card-title">Unga Bunga Cookunga</h1>
+        <p class="card-sub-title">
+          Resource Management PC Game
+        <p class="card-info">
+          I am the art director and the lead artist for this soon-to-be-released game.
+        </p>
+        <a href="UBC.html" class="card-btn">More</a>
+      </div>
+    </div>
+
+     <div class="card">
+      <img
+        src="Photos/UndergradResearch/clay1.jpeg"
+        class="card-img"
+      />
+      <div class="card-body">
+        <h1 class="card-title">Undergraduate Research</h1>
+        <p class="card-sub-title">
+          Stopmotion Animation Study
+        </p>
+        <p class="card-info">
+          Stopmotion classics like Wallace and Gromit were studied thoughly, leading up to the creation of my own oil-based clay recipe and stopmotion utilizing it.
+        </p>
+        <a href="UndergradResearch.html" class="card-btn">More</a>
+      </div>
+    </div>
+    </div>
+
+    <div class="flexcontainer">
+
+         <div class="card">
+      <img
+        src="Photos/conceptcover.jpg"
+      />
+      <div class="card-body">
+        <h1 class="card-title">Apothecary Arena</h1>
+        <p class="card-sub-title">
+          Cut-throat board game
+        <p class="card-info">
+          These were made for a board game concept project for one of my classes. 
+        </p>
+        <a href="Concept.html" class="card-btn">More</a>
+      </div>
+    </div>
+
+         <div class="card">
+      <img
+        src="Photos/vncover.jpg"
+      />
+      <div class="card-body">
+        <h1 class="card-title">Untitled Visual Novel</h1>
+        <p class="card-sub-title">
+          Sole Artist and Coder
+        <p class="card-info">
+          This game combines 2d with  3d, everything being crafted by hand.
+        </p>
+        <a href="VN.html" class="card-btn">More</a>
+      </div>
+    </div>
+
+    </div>
+
+
+</main>
 <footer>
   <div class="container">
     <p>© 2026 Sophie Lescamela</p>

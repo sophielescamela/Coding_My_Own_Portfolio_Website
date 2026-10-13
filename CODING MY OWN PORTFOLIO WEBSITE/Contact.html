@@ -15,7 +15,7 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background-image: url(Photos/contactbg.jpeg);
+      background: #7CA676;
       background-repeat: no-repeat;
       background-size: cover;
       color: #2D4427;
@@ -111,16 +111,16 @@ figcaption {
     .btn-outline {
       background: transparent;
       border: 1px solid #7c3aed;
-      color: #70A938;
+      color: #7CA676;
     }
 
     .btn-outline:hover {
-      background: #70A938;
+      background: #7CA676;
       color: white;
     }
 
     .btn:hover {
-      background: #70A938;
+      background: #7CA676;
       transform: translateY(-2px);
       box-shadow: 0 10px 20px -8px rgba(124, 58, 237, 0.4);
     }
@@ -233,7 +233,7 @@ figcaption {
     }
 
     .code-link {
-      color: #70A938;
+      color: #7CA676;
     }
 
     .demo-link:hover, .code-link:hover {
@@ -264,7 +264,7 @@ figcaption {
 
     .about-text p {
       margin-top: 0.75rem;
-      color: #70A938;
+      color: #7CA676;
     }
 
     .contact-links {
@@ -272,7 +272,7 @@ figcaption {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
-      color: #70A938;
+      color: #7CA676;
     }
 
     footer {
@@ -293,7 +293,7 @@ figcaption {
       }
       .nav-links {
         gap: 1.2rem;
-      color: #70A938;
+      color: #7CA676;
       }
       .avatar-circle {
         width: 180px;
@@ -304,6 +304,179 @@ figcaption {
         height: 165px;
       }
     }
+
+    /*THIS STUFF IS FOR THE CONTACT ME EMAIL*/
+    main
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+}
+
+.title
+{
+    font-size: 50px;
+    font-weight: bold;
+    padding: 1.5% 0;
+}
+
+.title-info
+{
+	padding-bottom: 2%;
+}
+
+.form
+{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding: 2%;
+}
+
+.input-group, .textarea-group
+{
+    padding: 1% 0;
+}
+
+input, textarea
+{
+    color: inherit;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #2D4427;
+    padding: 1.5%;
+    font-size: 20px;
+}
+
+input:focus, textarea:focus
+{
+    background-color: transparent;
+    outline: transparent;
+    border-bottom: 2px solid black;
+}
+
+input::placeholder, textarea::placeholder
+{
+    color: transparent;
+}
+
+label
+{
+    color: #2D4427;
+    position: relative;
+    left: 0.5em;
+    top: -2em;
+	cursor: auto;
+    transition: 0.3s ease all;
+}
+
+input:focus ~ label, input:not(:placeholder-shown) ~ label
+{
+    top: -4em;
+    color: #2D4427;
+    font-size: 15px;
+}
+
+textarea:focus ~ label, textarea:not(:placeholder-shown) ~ label
+{
+    top: -10.5em;
+    color: #2D4427;
+    font-size: 15px;
+}
+
+.button-div
+{
+    display: flex;
+    justify-content: center;
+}
+
+button
+{
+    padding: 2%;
+    width: 50%;
+    font-family: inherit;
+    font-size: 18px;
+    background-color: #CAA520;
+}
+
+button:hover
+{
+    background-color: #2D4427;
+    color: #7CA676;
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -8px #2D4427;
+}
+
+
+/* Media queries */
+
+@media screen and (max-width: 1200px)
+{
+    .form
+    {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 680px)
+{
+    .form
+    {
+		width: 90%;
+    }
+}
+
+@media screen and (max-width: 500px)
+{
+	.title
+	{
+		font-size: 40px;
+		padding-top: 6%;
+	}
+
+	.title-info
+	{
+		font-size: 13px;
+	}
+	
+	.form
+	{
+		padding: 6% 4%;
+		padding-top: 15%;
+	}
+
+	.input-group, .textarea-group
+    {
+		padding: 3% 0;
+	}
+	
+	input, textarea
+	{
+		font-size: 15px;
+	}
+
+	input:focus ~ label, input:not(:placeholder-shown) ~ label
+	{
+		top: -3.5em;
+		left: 0.1em;
+	}
+	
+	textarea:focus ~ label, textarea:not(:placeholder-shown) ~ label
+	{
+		top: -8.5em;
+		left: 0.2em;
+    }
+    
+    button
+    {
+        font-size: 15px;
+    }
+}
   </style>
 </head>
 <body>
@@ -321,72 +494,36 @@ figcaption {
   </div>
 </header>
 
-<main>
- <div class="container">
-    <!-- Hero -->
-    <section class="hero">
-      <div id="about" class="hero-content">
-        <h1>Contact Me!</h1>
-        <h2 style="font-size: 40px;">Sophie.Lescamela@gmail.com</h2>
+        <main>
+            <div class="title">Contact me!</div>
+            <div class="title-info">I'll get back to you as soon as I can :)</div>
 
-      </div>
-      </div>
-  <!-- Image button linking to Youtube -->
-<div class="leftcontainer">
-  <a href="https://www.youtube.com/@DrawerofDoom" target="_blank" style="text-decoration:none;">
-    <button style="
-      width:400px;
-      height:400px;
-      background-image:url('Photos/youtubelogo.jpg');
-      background-size:cover;
-      background-repeat:no-repeat;
-      background-position:center;
-      border:none;
-      cursor:pointer;
-    "></button>
-  </a>
-<figcaption>Youtube</figcaption>
-<figcaption>@SophieLescamela</figcaption>
-</div>
+            <form class="" action="mailto:sophie.lescamela@gmail.com" method="post" enctype="text/plain">
+                <div class="input-group">
+                    <input type="text" name="first_name" id="first-name" placeholder="First name">
+                    <label for="first-name">First name</label>
+                </div>
+                
+                <div class="input-group">
+                    <input type="text" name="last_name" id="last-name" placeholder="Last Name">
+                    <label for="last-name">Last name</label>
+                </div>
 
-<div class="rightcontainer">
-  <!-- Image button linking to Instagram -->
-  <a href="https://www.instagram.com/drawerofdoom/" target="_blank" style="text-decoration:none;">
-    <button style="
-      width:400px;
-      height:400px;
-      background-image:url('Photos/instagramlogo.jpg');
-background-color:transparent;
-      background-size:cover;
-      background-repeat:no-repeat;
-      background-position:center;
-      border:none;
-      cursor:pointer;
-    "></button>
-  </a>
-<figcaption>Instagram</figcaption>
-<figcaption>@drawerofdoom</figcaption>
-</div>
+                <div class="input-group">
+                    <input type="email" name="e-mail" id="e-mail" placeholder="e-mail">
+                    <label for="e-mail">e-mail</label>
+                </div>
 
- <!-- Image button linking to LinkedIn -->
-<div class="leftcontainer">
-  <a href="https://www.linkedin.com/in/sophie-lescamela-8a5057358/" target="_blank" style="text-decoration:none;">
-    <button style="
-      width:400px;
-      height:400px;
-      background-image:url('Photos/linkedinlogo.png');
-      background-size:cover;
-      background-repeat:no-repeat;
-      background-position:center;
-      border:none;
-      cursor:pointer;
-    "></button>
-  </a>
-<figcaption>LinkedIn</figcaption>
-<figcaption>@drawerofdoom</figcaption>
-</div>
+                <div class="textarea-group">
+                    <textarea name="message" id="message" rows="5" placeholder="Message"></textarea>
+                    <label for="message">Message</label>
+                </div>
 
-</section>
+                <div class="button-div">
+                    <button type="submit">Send</button>
+                </div>
+            </form>
+
 </main>
 
 <footer>

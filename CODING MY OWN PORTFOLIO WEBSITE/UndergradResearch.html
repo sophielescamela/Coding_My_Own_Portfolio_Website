@@ -287,7 +287,9 @@ padding-top: 100px;
 
        .flexcontainer {
       display: flex;
-      background-color: #7CA676;;
+      background-color: #7CA676;
+      align-items: center;
+      justify-content: center;
     }
 
       .avatar-circle {
@@ -308,6 +310,43 @@ padding-top: 100px;
     border-radius: 50%;
     display: block;
       }
+
+      /* GALLERY CODE */
+.gallery {
+  padding-top: 1em;
+  /* BASE # OF COLUMNS; CAN CHANGE THIS */
+  columns: auto 3;
+  text-align: center;
+}
+
+.gallery img {
+  border: 1px solid black;
+  width: 100%;
+}
+
+figure {
+  display: inline-block;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.spotlightImage {
+  display: block;
+  margin: 0 auto;
+}
+
+/* CHANGES # OF COLUMNS FOR SMALL SCREENS*/
+@media only screen and (max-width: 800px) {
+  .gallery {
+    columns: auto 2;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .gallery {
+    columns: auto 1;
+  }
+}
 
     footer {
       text-align: center;
@@ -377,11 +416,15 @@ padding-top: 100px;
           <p>My undergraduate research took place from the summer of 25 to the spring of 26. The goal of my research project was to learn as much as I could about stopmotion animation, specifically about the traditional methods of doing so. Specifically, I was focusing on stopmotion animation techniques using oil-based clay. I would eventually be making my own batches and concocting my own recipe once I obtained enough information about the matter. I began by studying the stopmotion classics such as Wallace and Gromit and Coraline, regardless of whether the stopmotion films themselves actually used oil based clay in the making of their characters. Throughout the course of my research, I made almost 100 different batches of clay. I could not have accomplished everything that I was able to had I not been pushed by my mentor, Teresa Lind, a renowned sculptor. </p>
           <div style="flex: 1; text-align: center;">
           </div><br>
+          <br>
 
           <div class="hero-avatar">
-        <div class="avatar-circle">
-          <img src="Photos/UndergradResearch/mepic2.jpeg" alt="Portrait photo">
-        </div>
+          <img src="Photos/UndergradResearch/mepic3.JPG" alt="Portrait photo">
+          </div>
+          
+          <br>
+          <br>
+
 
         <p>I built seven different armatures for the stopmotion animation that I ended up creating, all of them using ball-joints to allow natural movement of the body. In addition to the making of the characters for the stopmotion animation, I also made the backgrounds from scratch, learning many different techniques to create various types of miniatures. I eneded up learning wood carving, which ended up being used for almost all of the furniture in the set. The plot for this stopmotion short film was geology and biology based, as my second mentor was a Geology Professor. The storyline was a mockumentary, inspired by Aardman's Creature Creations series, of a various people talking about how dodo birds went extinct, none of them wanting to take accountability for the fact that humans were the ones that caused their extinction.</p>
         <br>
@@ -403,9 +446,11 @@ padding-top: 100px;
 
     <!--ACTUAL PORTFOLIO PORTION OF THE PAGE-->
     <title>Pictures of my work</title>
+    <div class="gallery">
     <img src="Photos/UndergradResearch/clay1.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
     <img src="Photos/UndergradResearch/clay2.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
     <img src="Photos/UndergradResearch/clay3.jpeg" alt="PROJECT IMAGE" style="width:auto; height:400px;">
+    </div>
 
   </div><br>
   </div><br>
