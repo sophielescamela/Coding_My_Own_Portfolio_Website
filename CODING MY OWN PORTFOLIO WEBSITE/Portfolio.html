@@ -257,6 +257,8 @@ padding-top: 100px;
       background-color: #7CA676;
       align-items: center;
       justify-content: center;
+      overflow-x: auto;           /* Enable horizontal scrolling on small screens */
+      -webkit-overflow-scrolling: touch;
     }
 
     footer {
@@ -286,13 +288,16 @@ padding-top: 100px;
         width: 165px;
         height: 165px;
       }
+      .flexcontainer {
+      overflow-x: visible;      /* Turn off horizontal scroll */
+      }
     }
 
     @media (max-width: 500px) {
       .card-info {
-        font-size: 11px;
+        font-size: 14px;
         line-height: 15px;
-        font-weight: 300;
+        font-weight: 350;
       }
 
       .card-title {
