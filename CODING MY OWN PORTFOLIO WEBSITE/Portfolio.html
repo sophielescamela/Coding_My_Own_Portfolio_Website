@@ -22,7 +22,7 @@
     }
 
     .container {
-      max-width: 1280px;
+      max-width: auto;
       margin: 0 auto;
       padding: 0 2rem;
     }
@@ -286,6 +286,21 @@ padding-top: 100px;
         width: 165px;
         height: 165px;
       }
+    }
+
+    @media (max-width: 500px) {
+      .card-info {
+        font-size: 11px;
+        line-height: 15px;
+        font-weight: 300;
+      }
+
+      .card-title {
+        text-transform: uppercase;
+        font-size: 25px;
+        font-weight: 400;
+      }
+
     }
 
   </style>
