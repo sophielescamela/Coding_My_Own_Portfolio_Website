@@ -148,15 +148,16 @@ padding-top: 100px;
       color: #3b2e6b;
     }
 
-      .card {
-        width: 320px;
-        height: auto;
-        border-radius: 20px;
-        overflow: hidden;
-        border: 8px solid #2D4427;
-        position: relative;
-        margin: 20px;
-      }
+    .card {
+  width: 320px;
+  height: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 8px solid #2D4427;
+  position: relative;
+  margin: 20px;
+  flex: 0 0 auto;              /* NO CARD SQUISH*/
+}
 
       .card-img {
         width: auto;
@@ -256,10 +257,12 @@ padding-top: 100px;
       display: flex;
       background-color: #7CA676;
       align-items: center;
-      justify-content: center;
-      overflow-x: auto;           /* Enable horizontal scrolling on small screens */
-      -webkit-overflow-scrolling: touch;
-    }
+     justify-content: flex-start; /* Changed from center to prevent scrolling layout bugs */
+     flex-wrap: nowrap;           /* Forces cards to stay on one line */
+     overflow-x: auto;            /* Enables the horizontal scrolling */
+      -webkit-overflow-scrolling: touch; /* Smooth scroll*/
+      padding: 10px 2rem;          
+}
 
     footer {
       text-align: center;
@@ -288,10 +291,15 @@ padding-top: 100px;
         width: 165px;
         height: 165px;
       }
-      .flexcontainer {
-      overflow-x: visible;      /* Turn off horizontal scroll */
-      }
     }
+
+    @media (min-width: 768px) {
+  .flexcontainer {
+    flex-wrap: wrap;           /* Allows cards to wrap onto lines if needed */
+    justify-content: center;   /* Recenters gallery layout for computer */
+    overflow-x: visible;       /* Disables scrollbar */
+  }
+}
 
     @media (max-width: 500px) {
       .card-info {
