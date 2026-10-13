@@ -14,15 +14,17 @@
     }
 
     body {
+      background-color: white;
       font-family: 'Inter', sans-serif;
       background-color: #7CA676;
       color: #2D4427;
       line-height: 1.5;
       scroll-behavior: smooth;
+      font-size: 1.2rem; 
     }
 
     .container {
-      max-width: auto;
+      max-width: 1280px;
       margin: 0 auto;
       padding: 0 2rem;
     }
@@ -31,6 +33,12 @@
       max-width: 1500px;
       margin: 0 auto;
       padding: 0 4rem;
+    }
+
+        .hero-avatar {
+      flex: 0.8;
+      display: flex;
+      justify-content: center;
     }
 
     /* header / navigation */
@@ -101,8 +109,8 @@ text-align: center;
 
 /* BANNER CODE*/
 .banner {
-width: auto;
-height: auto;
+width: 100%;
+height: 600px;
 background-image: url('Photos/bg.jpg');
 background-size: cover;
 background-position: center;
@@ -141,6 +149,7 @@ padding-top: 100px;
     }
 
     .tech {
+      background: #f0eef8;
       padding: 0.2rem 0.7rem;
       border-radius: 30px;
       font-size: 0.75rem;
@@ -148,20 +157,71 @@ padding-top: 100px;
       color: #3b2e6b;
     }
 
-    .card {
-  width: 320px;
-  height: auto;
-  border-radius: 20px;
-  overflow: hidden;
-  border: 8px solid #2D4427;
-  position: relative;
-  margin: 20px;
-  flex: 0 0 auto;              /* NO CARD SQUISH*/
-}
+    .card-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.25rem;
+    }
+
+    .card-links a {
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: 0.2s;
+    }
+
+    .demo-link {
+      color: #7c3aed;
+    }
+
+    .code-link {
+      color: #4a5568;
+    }
+
+    .demo-link:hover, .code-link:hover {
+      text-decoration: underline;
+      opacity: 0.8;
+    }
+
+    .about-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .about-text {
+      flex: 2;
+    }
+
+    .about-text p {
+      margin-top: 0.75rem;
+      color: #2D4427;
+    }
+
+    .contact-links {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+          .card {
+        width: 320px;
+        height: 500px;
+        border-radius: 20px;
+        overflow: hidden;
+        border: 8px solid #2D4427;
+        position: relative;
+        margin: 20px;
+      }
 
       .card-img {
-        width: auto;
-        height: auto;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
         border-radius: 15px;
       }
@@ -218,51 +278,74 @@ padding-top: 100px;
         cursor: pointer;
       }
 
-    .demo-link {
-      color: #7c3aed;
-    }
-
-    .code-link {
-      color: #4a5568;
-    }
-
-    .demo-link:hover, .code-link:hover {
-      text-decoration: underline;
-      opacity: 0.8;
-    }
-
-    .about-flex {
+          .about-flex {
       display: flex;
       flex-wrap: wrap;
       gap: 2rem;
       align-items: center;
     }
 
-    .about-text {
-      flex: 2;
-    }
-
-    .about-text p {
-      margin-top: 0.75rem;
-      color: #2D4427;
-    }
-
-    .contact-links {
-      margin-top: 1.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .flexcontainer {
+       .flexcontainer {
       display: flex;
       background-color: #7CA676;
       align-items: center;
-     justify-content: flex-start; /* Changed from center to prevent scrolling layout bugs */
-     flex-wrap: nowrap;           /* Forces cards to stay on one line */
-     overflow-x: auto;            /* Enables the horizontal scrolling */
-      -webkit-overflow-scrolling: touch; /* Smooth scroll*/
-      padding: 10px 2rem;          
+      justify-content: center;
+    }
+
+      .avatar-circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    padding: 7px; /* Space for the border image */
+    background: url('border-pattern.png') center/cover no-repeat; /* Border image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .avatar-circle img {
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+    display: block;
+      }
+
+      /* GALLERY CODE */
+.gallery {
+  padding-top: 1em;
+  /* BASE # OF COLUMNS; CAN CHANGE THIS */
+  columns: auto 3;
+  text-align: center;
+}
+
+.gallery img {
+  border: 1px solid black;
+  width: 100%;
+}
+
+figure {
+  display: inline-block;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.spotlightImage {
+  display: block;
+  margin: 0 auto;
+}
+
+/* CHANGES # OF COLUMNS FOR SMALL SCREENS*/
+@media only screen and (max-width: 800px) {
+  .gallery {
+    columns: auto 2;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .gallery {
+    columns: auto 1;
+  }
 }
 
     footer {
@@ -288,35 +371,12 @@ padding-top: 100px;
         width: 180px;
         height: 180px;
       }
+      
       .avatar-circle img {
         width: 165px;
         height: 165px;
       }
     }
-
-    @media (min-width: 768px) {
-  .flexcontainer {
-    flex-wrap: wrap;           /* Allows cards to wrap onto lines if needed */
-    justify-content: center;   /* Recenters gallery layout for computer */
-    overflow-x: visible;       /* Disables scrollbar */
-  }
-}
-
-    @media (max-width: 500px) {
-      .card-info {
-        font-size: 14px;
-        line-height: 15px;
-        font-weight: 350;
-      }
-
-      .card-title {
-        text-transform: uppercase;
-        font-size: 25px;
-        font-weight: 400;
-      }
-
-    }
-
   </style>
 
 </head>
@@ -337,9 +397,9 @@ padding-top: 100px;
 
 <!--THIS IS THE MAIN CONTENT-->
 <main>
- 
-<!--ORGANIZES CARDS-->
-  <div class="flexcontainer">
+
+<!--ORGANIZES CARDS AND PLACES THEM BELOW THE ACTUAL PROJECT PAGE-->
+  <div class="gallery">
 
  <div class="card">
       <img
@@ -391,7 +451,7 @@ padding-top: 100px;
     </div>
     </div>
 
-    <div class="flexcontainer">
+    <div class="gallery">
 
          <div class="card">
       <img
@@ -424,7 +484,7 @@ padding-top: 100px;
     </div>
 
     </div>
-    
+
 
 </main>
 <footer>
