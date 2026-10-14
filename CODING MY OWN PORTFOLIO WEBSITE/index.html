@@ -74,50 +74,55 @@
     }
 
     /* buttons & general */
-    .btn {
-      display: inline-block;
-      background: #CAA520;
-      color: #2D4427;
-      padding: 0.7rem 1.5rem;
-      border-radius: 40px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.25s ease;
-      border: none;
-      cursor: pointer;
-    }
+.btn {
+  margin-top: clamp(1rem, 2vw, 2rem);
+  display: inline-block;
+  background: #CAA520;
+  color: #2D4427;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  border: none;
+  cursor: pointer;
 
-    .btn-outline {
-      background: transparent;
-      border: 1px solid #7c3aed;
-      color: #7c3aed;
-    }
+  /* 1. DUPLICATE REMOVED: Fluid padding scales smoothly with the banner width */
+  padding: clamp(0.4rem, 1.2vw, 0.8rem) clamp(1rem, 3vw, 2rem);
 
-    .btn-outline:hover {
-      background: #7c3aed;
-      color: #2D4427;
-    }
+  /* 2. FIXED TYPO: Removed the space between 'clamp' and '(' */
+  font-size: clamp(0.85rem, 1.5vw, 1.2rem); 
+}
 
-    .btn:hover {
-      background: #D1B623;
-      transform: translateY(-2px);
-      box-shadow: 0 10px 20px -8px #2D4427;
-    }
+.btn-outline {
+  background: transparent;
+  border: 1px solid #7c3aed;
+  color: #7c3aed;
+}
+
+.btn-outline:hover {
+  background: #7c3aed;
+  color: #2D4427;
+}
+
+.btn:hover {
+  background: #D1B623;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -8px #2D4427;
+}
+
 
     /* BANNER CODE*/
     .banner {
-      width: auto;
       background-image: url('birdbanner.gif');
-      background-size: cover;
-      background-position: center;
+      background-size: 100% auto;
+      background-repeat: no-repeat;
       display: flex;              
       flex-direction: column;        
-      align-items: left;        
-      padding-left: 100px;       
-      padding-top: 100px;      
-      padding-bottom: 100px;  
-      font-size: 1.8rem;
-}
+      justify-content: center;      
+      padding-left: 8vw;          
+      padding-top: 7vw;           
+      padding-bottom: 8vw;  
+    }
 
     /* Hero section */
     .hero {
@@ -333,10 +338,9 @@
 
 <!-- THIS IS THE BANNER GIF-->
 </div><div class="banner">
-<p>Character Designer<p>
-<br>
-<p>Animator<p>
-<br>
+<p style="font-size: 4vw;">Character Designer<p>
+  <br>
+<p style="font-size: 4vw;">Animator<p>
 <a href="Portfolio.html" class="btn" style="padding:0.5rem 1.2rem;">Check out my portfolio</a>
 </div>
 
@@ -346,7 +350,7 @@
     <section class="hero">
       <div class="hero-content">
         <h1>Hello! I'm Sophie :)</h1>
-<p>I am a character designer and animator who is finishing out my time in college!</p>
+        <p>I am a character designer and animator who is finishing out my time in college!</p>
         <p>I am an artist who focuses on creating emotionally resonant work that connects with audiences and impacts them in a meaningful way.</p>
 <a href="About.html" class="btn" style="padding:0.5rem 1.2rem;">Learn more about me</a>
       </div>
